@@ -1,0 +1,88 @@
+body {
+    background: #2c2c2c;
+}
+
+aside{
+    float: left;
+    background: #181818;
+    width: 300px;
+    padding: 30px;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+    position: fixed
+}
+
+aside img{
+    margin-top:10px;
+    width: 60px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+
+aside h3 {
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+aside ul{list-style: none}
+aside ul li{
+    color: #fff;
+    display:block;
+    margin-top:20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features{
+    float:left;
+    color: #fff;
+    margin-top: 100px;
+    margin-left: 300px;
+    text-align: center;
+    width: 1000px;
+}
+
+main .features h1 {font-size: 50px; text-align: center;}
+main .features p {max-width: 800px; margin: 20px auto}
+
+.btn-warning{
+    color: #000;
+    background: #fff;
+    float: left;
+    clear: both;
+    width: 800px;
+    margin: 20px 14%;
+    text-align: left;
+}
+
+form{
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+main .poster{
+    float:left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 400px;
+    text-align: left;
+    width: 1000px;
+}
+main .poster h1 {font-size: 50px; text-align: center;}
+main .poster h2 {font-size: 15px; text-align: center;}
+main .poster p {max-width: 800px; margin: 20px auto}
+main .poster img {max-width: 1000px; margin: 1300px,}
+main .poster hr { background: #fff;}

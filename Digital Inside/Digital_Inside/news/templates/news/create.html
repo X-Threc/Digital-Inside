@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Форма по добавлению новости{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Форма по добавлению новости</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            <button class="btn btn-success">{{ form.image }}</button>
+            <br><br>
+            {{ form.contents }}<br>
+
+            <span>{{ error}}</span>
+            <button class="btn btn-success" type="submit">Добавить статью</button>
+
+        </form>
+
+    </div>
+{% endblock %}

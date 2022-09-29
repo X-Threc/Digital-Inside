@@ -1,0 +1,37 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}{{ arcticle.title }}{% endblock %}
+
+
+{% block content %}
+    <div class="poster">
+        <h1>{{ arcticle.title }}</h1>
+        <h2>{{ arcticle.date_post }}</h2>
+        <img src="{{MEDIA_URL}}{{arcticle.image.url}}"/>
+        <p>{{ arcticle.contents }}</p>
+
+        <hr>
+        {% if user.is_active%}
+            <form method="post" >
+                {% csrf_token %}
+                {{form.content}}
+                <input type="submit" value="Отправить">
+            </form>
+        {%else%}
+            <p>Чтобы оставить комментарий, нужно зайти в пользователя</p>
+        {%endif%}
+
+        <hr>
+        <h4>Комментарии:</h4>
+        {% for comm in comment%}
+
+            {{comm.commentator}}|
+            {{comm.content}}<br><br>
+        {%endfor%}
+
+    </div>
+    <div class="poster">
+
+    </div>
+
+{% endblock %}
